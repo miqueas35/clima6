@@ -12,9 +12,9 @@ export const DataClima = ({ children }) => {
   const [data, setData] = useState([]);
   return (
     <climaContext.Provider value={data}>
-     <climaToggleContext.Provider value={setData}>
-      {children}
-     </climaToggleContext.Provider>
+      <climaToggleContext.Provider value={setData}>
+        {children}
+      </climaToggleContext.Provider>
     </climaContext.Provider>
   );
 };
