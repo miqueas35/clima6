@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
-import { DataClima } from './providers/DataClima'
+import { DataClima } from './providers/DataClima';
+
 function App() {
   return (
     <DataClima>
