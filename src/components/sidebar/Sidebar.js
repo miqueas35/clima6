@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useCiudadContext } from '../../providers/DataCiudad';
 import { useClimaToggleContext, useClimaContext } from '../../providers/DataClima';
+import './Slidebar.css';
 
 const Sidebar = ({ setInputCity }) => {
   const ciudades = useCiudadContext();
@@ -9,8 +10,8 @@ const Sidebar = ({ setInputCity }) => {
   const clima = useClimaContext();
   console.log(clima);
   return (
-    <div className='container-fluid'>
-      <div className='row vh-100'>
+    <div className='container-fluid container_general'>
+      <div className='row container_flex vh-100'>
         <div className='col-12'>
           <input type="text" placeholder='Ciudad' onChange={(e) => setInputCity(e.target.value) }/>
           <select onChange={ async (e) => {
@@ -20,10 +21,11 @@ const Sidebar = ({ setInputCity }) => {
             {ciudades?.map(ciudad => <option key={ciudad.id} >{ciudad.name}</option>)}
           </select>
         </div>
-        <div className='col-12'>
-          {clima && <h2>{clima.location.name}</h2>}
+        <div className='col-12 container_ciudad'>
+          {clima && <h2>{clima.location.name}-
+          {clima.location.region}- {clima.location.country}</h2>}
           {clima && <h2>{clima.location.localtime}</h2>}
-          {clima && <h2>{clima.current.temp_c}</h2>}
+          {clima && <h2>Temperatura: {clima.current.temp_c}°</h2>}
         </div>
       </div>
     </div>

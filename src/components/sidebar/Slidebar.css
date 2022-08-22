@@ -1,0 +1,30 @@
+.container_general {
+  height: 100vh;
+  background-image: url('../../assets/img/images.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container_flex {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container_ciudad {
+  background-color: rgba(37, 17, 17, 0.445);
+  border: 1px solid transparent;
+  box-shadow: 0 1em 1em 0 rgba(8, 1, 1, 0.534);
+  color: white;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  margin-top: 2em;
+}
