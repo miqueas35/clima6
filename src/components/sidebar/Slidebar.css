@@ -28,3 +28,26 @@
   padding: 0.5em;
   margin-top: 2em;
 }
+.input input{
+  border: solid 1px lightblue;
+  background-color: lightblue;
+  color: darkblue;
+}
+.input input:focus {
+  border: solid 1px lightblue;
+  outline: none;
+}
+.input input::placeholder {
+  color: black;
+}
+.input select{
+  margin-left:15px;
+  background-color: lightblue;
+  color: darkblue;
+  border-radius: 5px;
+  outline: none;
+}
+.titulo{
+  text-align: center;
+  color: darkblue;
+}

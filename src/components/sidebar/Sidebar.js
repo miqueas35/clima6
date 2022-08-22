@@ -12,7 +12,8 @@ const Sidebar = ({ setInputCity }) => {
   return (
     <div className='container-fluid container_general'>
       <div className='row container_flex vh-100'>
-        <div className='col-12'>
+        <h1 className='titulo'>Clima React App</h1>
+        <div className='input col-12'>
           <input type="text" placeholder='Ciudad' onChange={(e) => setInputCity(e.target.value) }/>
           <select onChange={ async (e) => {
             const weather = await axios(`http://api.weatherapi.com/v1/current.json?key=6be8c28794924ed8a2a184922222905&q=${e.target.value}`);
