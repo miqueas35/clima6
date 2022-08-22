@@ -4,6 +4,7 @@ import { useClimaContext } from '../../providers/DataClima';
 
 const Sidebar = ({ setInputCity }) => {
   const ciudades = useClimaContext();
+  console.log(ciudades);
   return (
     <div className='container-fluid'>
       <div className='row vh-100'>
@@ -13,11 +14,7 @@ const Sidebar = ({ setInputCity }) => {
             const weather = await axios(`http://api.weatherapi.com/v1/current.json?key=6be8c28794924ed8a2a184922222905&q=${e.target.value}`);
             console.log(weather);
           }} >
-            {ciudades?.map((ciudad) => {
-              return (
-                <option key={ciudad.id} value={ciudad.name}>{ciudad.name}</option>
-              );
-            })}
+            {ciudades?.map(ciudad => <option key={ciudad.id} >{ciudad.name}</option>)}
           </select>
         </div>
       </div>
