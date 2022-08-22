@@ -11,7 +11,7 @@ export const useCiudadToggleContext = () => {
   return useContext(ciudadToggleContext);
 };
 
-export const dataCiudad = ({ children }) => {
+export const DataCiudad = ({ children }) => {
   const [data, setData] = useState([]);
   return (
     <ciudadContext.Provider value={data}>
